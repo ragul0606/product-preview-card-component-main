@@ -45,16 +45,21 @@ li {
 .btn {
   display: inline-block;
   border-radius: 8px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   margin-top: 0.5rem;
-  text-transform: capitalize;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-family: var(--ff-montserrat);
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
   /* customize */
-  background-color: #1c2042;
+  background-color: var(--clr-cyan);
   color: white;
-  border: 2px solid #1c2042;
+  border: 2px solid var(--clr-cyan);
+}
+
+.btn:hover {
+  background-color: hsl(158, 34%, 18%);
+  border: 2px solid hsl(158, 34%, 18%);
 }
 
 :root {
@@ -68,7 +73,116 @@ li {
   --ff-fraunces: "Fraunces", serif;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-cream);
+  padding: 1rem;
+}
+
+.card {
+  width: 24rem;
+  background-color: var(--clr-white);
+  border-radius: var(--radius);
+}
+
+.img-container {
+  width: 24rem;
+  height: 16.5rem;
+  background-image: url(../images/image-product-mobile.jpg);
+  background-size: cover;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.head-perfume {
+  letter-spacing: 0.25rem;
+  font-family: var(--ff-montserrat);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--clr-grayish-blue);
+}
+
+.main-title {
+  font-family: var(--ff-fraunces);
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: var(--clr-dark-blue);
+  margin-top: -2px;
+}
+
+.main-description {
+  font-family: var(--ff-montserrat);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--clr-grayish-blue);
+  opacity: 75%;
+  margin-top: -22px;
+}
+
+.price {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.dollar {
+  font-family: var(--ff-fraunces);
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: var(--clr-cyan);
+}
+
+.strike-price {
+  font-family: var(--ff-montserrat);
+  font-weight: 500;
+  text-decoration: line-through;
+  color: var(--clr-grayish-blue);
+  opacity: 80%;
+}
+
+.cart-img {
+  width: 14px;
+}
+
 @media screen and (min-width: 576px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 48rem;
+    background-color: var(--clr-white);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .img-container {
+    width: 24rem;
+    height: 26rem;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    border-bottom-left-radius: var(--radius);
+    border-top-right-radius: 0;
+  }
 }
 
 /* Medium devices (tablets) */
